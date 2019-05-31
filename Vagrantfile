@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
     app.vm.synced_folder "app", "/app"
 
     # provision with chef
-    app.vm.provision "chef_solo" do |chef|
+    app.vm.provision "chef_zero" do |chef|
         chef.add_recipe "node-server::default"
     end
   end
@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
     db.hostsupdater.aliases = ["database.local"]
 
     # provision with chef
-    db.vm.provision "chef_solo" do |chef|
+    db.vm.provision "chef_zero" do |chef|
         chef.add_recipe "mongo-server::default"
     end
   end
