@@ -33,9 +33,8 @@
       "destination": "/home/ubuntu/app"
     },
     {
-      "type": "chef-solo",
-      "install_command": "curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -v 14.12.9",
-      "cookbook_path": "./cookbook",
+      "type": "chef-zero",
+      "cookbook_paths": ["./cookbooks"],
       "run_list":["node-server::default"]
     },
     {
