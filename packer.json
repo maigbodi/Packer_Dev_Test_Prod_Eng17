@@ -33,7 +33,7 @@
       "destination": "/home/ubuntu/app"
     },
     {
-      "type": "chef-zero",
+      "type": "chef-solo",
       "cookbook_paths": ["./cookbooks"],
       "run_list":["node-server::default"]
     },
